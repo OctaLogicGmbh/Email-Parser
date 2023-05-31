@@ -21,28 +21,37 @@ app = Flask(__name__)
 openai.api_key = "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"
 
 def extract_latest_body(latest_body, sender_email_domain):
+    # Analizar el cuerpo HTML utilizando BeautifulSoup
     soup = BeautifulSoup(latest_body, 'html.parser')
 
+    # Encontrar el elemento 'blockquote'
     blockquote = soup.find('blockquote')
     if blockquote:
+        # Si se encuentra un 'blockquote', buscar el elemento anterior más cercano que sea 'blockquote', 'div' o 'p'
         latest_message = blockquote.find_previous(['blockquote', 'div', 'p'])
     else:
+        # Si no se encuentra un 'blockquote', utilizar el propio 'soup'
         latest_message = soup
 
+    # Eliminar los elementos 'style' y 'script' del mensaje más reciente
     for elem in latest_message(['style', 'script']):
         elem.decompose()
 
+    # Obtener el contenido de texto del mensaje más reciente, separado por espacios y sin espacios en los extremos
     text_content = latest_message.get_text(separator=' ', strip=True)
 
+    # Escapar el dominio del correo electrónico del remitente para buscar coincidencias en el texto
     sender_domain_regex = re.escape(sender_email_domain)
     match = re.search(sender_domain_regex, text_content)
 
-    if match:
-        text_content = text_content[:match.start()].strip()
-    
-    #print(text_content)
+    # Verificar si hay una coincidencia o si la longitud del texto alcanza los 1500 caracteres
+    if match is not None or len(text_content) >= 1500:
+        # Si se cumple alguna de las condiciones, eliminar el contenido a partir de los 1500 caracteres
+        text_content = text_content[:1500].strip()
 
     return text_content
+
+
 
 
 from datetime import datetime
