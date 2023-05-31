@@ -45,6 +45,8 @@ def extract_latest_body(latest_body, sender_email_domain):
     return text_content
 
 
+from datetime import datetime
+
 def read_email(file_path, file_type):
     if file_type == 'msg':
         msg = extract_msg.Message(file_path)
@@ -67,8 +69,7 @@ def read_email(file_path, file_type):
             if part.get_content_type() == 'text/html':
                 html_body = part.get_content()
                 break
-    
-    
+
     sender_email = re.search(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', sender).group()
 
     # Extract the domain from the sender's email address
@@ -76,9 +77,19 @@ def read_email(file_path, file_type):
 
     # Pass the sender's email domain to the extract_latest_body function
     latest_body = extract_latest_body(html_body, sender_email_domain)
-    #print(sender, recipients, subject, latest_body, sent_date, sender_email_domain)
 
-    return sender, recipients, subject, latest_body, sent_date
+    # Convert the sent_date to a datetime object
+    sent_date_datetime = datetime.strptime(sent_date, "%a, %d %b %Y %H:%M:%S %z")
+
+    # Format the sent_date as a string in ISO 8601 format
+    sent_date_formatted = sent_date_datetime.isoformat()
+
+    recipient_emails = re.findall(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', recipients)
+    recipients_email = ', '.join(recipient_emails)
+
+    return sender_email, recipients_email, subject, latest_body, sent_date_formatted
+
+
 
 
 
@@ -88,18 +99,13 @@ def summarize_email(email_text):
     model_engine = "text-davinci-002"
 
     prompt = (
-        "Please summarize the following email, get the text sentiment and extract 5 keywords:\n\n"
+        "[no prose] [Output only JSON] Please summarize the following email, get the text sentiment and extract 5 keywords:\n\n"
         "{text_content}\n\n"
         "Here's an example of what the response should look like:\n\n"
         "{example_data}\n\n"
-        "Your summary:"
     )
 
-    example_data = [
-        "The email is requesting support to add three names to a list of sellers.",
-        "Positive",
-        ["TMS", "Inside Sales", "Caroline"]
-    ]
+    example_data = ["The email is requesting support to add three names to a list of sellers.", "Positive", ["TMS", "Inside Sales", "Caroline"]]
 
     response = openai.Completion.create(
         engine=model_engine,
@@ -117,9 +123,6 @@ def summarize_email(email_text):
     return summary
 
 
-
-
-
 @app.route('/summarize_email', methods=['POST'])
 def process_email():
     email_file = request.files['email']
@@ -129,7 +132,6 @@ def process_email():
     email_file.save(file_path)
 
     sender, recipients, subject, latest_body, sent_date = read_email(file_path, file_type)
-    print(latest_body)
 
     # Call the summarize_email function with the latest_body as the argument
     summary = summarize_email(latest_body)
