@@ -108,17 +108,14 @@ def summarize_email(email_text):
     model_engine = "text-davinci-002"
 
     prompt = (
-        "[no prose] [Output only JSON] Please summarize the following email, get the text sentiment and extract 5 keywords:\n\n"
+        "[no prose] [Output only JSON] 1.Summary: Make a summary the following email in 25 words. 2.Sentiment: Get the text sentiment. 3.Keywords: Extract 5 keywords:\n\n"
         "{text_content}\n\n"
-        "Here's an example of what the response should look like:\n\n"
-        "{example_data}\n\n"
     )
 
-    example_data = ["The email is requesting support to add three names to a list of sellers.", "Positive", ["TMS", "Inside Sales", "Caroline"]]
 
     response = openai.Completion.create(
         engine=model_engine,
-        prompt=prompt.format(text_content=latest_body, example_data=example_data),
+        prompt=prompt.format(text_content=latest_body),
         max_tokens=1024,
         n=1,
         stop=None,
@@ -134,7 +131,11 @@ def summarize_email(email_text):
 
 @app.route('/summarize_email', methods=['POST'])
 def process_email():
-    email_file = request.files['email']
+    email_file = request.files.get('email')  # Retrieve the file with any name
+
+    if email_file is None:
+        return jsonify({'error': 'No email file found'})
+
     file_type = os.path.splitext(email_file.filename)[1][1:].lower()
 
     file_path = os.path.join(UPLOAD_FOLDER, secure_filename(email_file.filename))
@@ -144,7 +145,6 @@ def process_email():
 
     # Call the summarize_email function with the latest_body as the argument
     summary = summarize_email(latest_body)
-    #print(summary)
 
     response = {
         'sender': sender,
@@ -161,9 +161,9 @@ def process_email():
     with open(response_filepath, 'w') as json_file:
         json.dump(response, json_file, default=str)
 
-    #print(response)
 
     return jsonify(response)
+
 
 if __name__ == '__main__':
     app.run()
