@@ -1,0 +1,643 @@
+Received: from PAVPR03MB9526.eurprd03.prod.outlook.com (2603:10a6:102:304::7)
+ by AS4PR03MB8364.eurprd03.prod.outlook.com with HTTPS; Tue, 30 May 2023
+ 11:21:34 +0000
+Received: from DU2PR03MB7943.eurprd03.prod.outlook.com (2603:10a6:10:2da::17)
+ by PAVPR03MB9526.eurprd03.prod.outlook.com (2603:10a6:102:304::7) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6433.22; Tue, 30 May
+ 2023 11:21:32 +0000
+Received: from DU2PR03MB7943.eurprd03.prod.outlook.com
+ ([fe80::e50e:bd3f:85bb:99b0]) by DU2PR03MB7943.eurprd03.prod.outlook.com
+ ([fe80::e50e:bd3f:85bb:99b0%4]) with mapi id 15.20.6433.022; Tue, 30 May 2023
+ 11:21:32 +0000
+From: "Carsten Schryver (DE)" <carsten.schryver@schryver.com>
+To: "Rene Schmitt (DE) - IT" <rene.schmitt@schryver.com>, Carlos Marquez
+	<carlos@logic.fyi>, "Peter Fries (DE-HAM)" <Peter.Fries@schryver.com>, "Jens
+ Kaehlert (DE-HAM)" <Jens.Kaehlert@schryver.com>, "Info (MHG)"
+	<info@mercurius-hg.com>
+Subject: Mercurius System
+Thread-Topic: Mercurius System
+Thread-Index: AdmS6MwBle9Zog32QsaissRhcj9WGA==
+Date: Tue, 30 May 2023 11:21:32 +0000
+Message-ID:
+	<DU2PR03MB794378A4EABB55F5B9D561FEE74B9@DU2PR03MB7943.eurprd03.prod.outlook.com>
+Accept-Language: de-DE, en-US
+Content-Language: de-DE
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: DU2PR03MB7943.eurprd03.prod.outlook.com
+X-Mentions: carlos@logic.fyi
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	53d4269f-9716-4008-5755-08db6100055d
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-publictraffictype: Email
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=schryver.com;
+x-ms-office365-filtering-correlation-id: 53d4269f-9716-4008-5755-08db6100055d
+x-microsoft-antispam: BCL:0;
+x-ms-traffictypediagnostic:
+	DU2PR03MB7943:EE_|PAVPR03MB9526:EE_|AS4PR03MB8364:EE_
+x-forefront-antispam-report:
+	CIP:255.255.255.255;CTRY:;LANG:de;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:DU2PR03MB7943.eurprd03.prod.outlook.com;PTR:;CAT:NONE;SFS:;DIR:INT;
+x-ms-exchange-crosstenant-network-message-id:
+	53d4269f-9716-4008-5755-08db6100055d
+x-ms-exchange-crosstenant-originalarrivaltime: 30 May 2023 11:21:32.0571 (UTC)
+x-ms-exchange-crosstenant-fromentityheader: Hosted
+x-ms-exchange-crosstenant-id: ac969c2a-bb77-4574-903a-3d1ba025335a
+x-ms-exchange-crosstenant-mailboxtype: HOSTED
+x-ms-exchange-crosstenant-userprincipalname:
+	sIqzArpZpI2nq/ZcGGl/T0d04lQfMrwwpeO2FhyVJsLhGS4797deqgfb5nsMV0RAPNMfuscHXB1ocyj2gvDckeyf2iCpjy+7IDKTjTp+zrA=
+x-ms-exchange-transport-crosstenantheadersstamped: PAVPR03MB9526
+x-ms-exchange-transport-endtoendlatency: 00:00:02.1970549
+x-ms-exchange-processed-by-bccfoldering: 15.20.6433.020
+x-ms-exchange-crosstenant-authas: Internal
+x-ms-exchange-crosstenant-authsource: DU2PR03MB7943.eurprd03.prod.outlook.com
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097);
+X-Microsoft-Antispam-Message-Info:
+	Vyw+AwdwURIvp+WQEsptQtQQ1aLT0w/qJ+d5v/R+HW3hjPw22OKIQA1l8pgM6lM7WwKt8llqFn6YmkFXZIheoYMv7d0dxrXv0IprxVQQnviiynDUbwYyakZewel8lepFychMOpj3p2QrEZ+oJ26aeQUj0G9mWe4L0r8ZDM0/P3F6kyUOb23bb/IBEc40tHCGVUKAuCFyC7tT1TcDlHGs9ngZL5iR/upTnK9NjIVPR3DwtE4+hd6Q9ChMuyg7YixPcb2JQMPyTplrGtZ6/neigZ8RwZumjxwDQ+GAStyBdsc/IXwL7BTlRHD3kXVfRukhHg7oevyqbjYvoJY3qnEogm2WIWEDBNg7VYVSwJQ8lCS9IBDQ9ga4mylYZw1DVkt1gmxR/AWwQySEbcV3fVgJO+udbJnsbNk1dgfVq56br1G2dJoGPGXn1uV/m/buB8nHppIGu0w1IBSHRqzeYbUX+nVzMs487ncP0VE2Snz5LujHfFWSvXlqQgPVU4DJff1/6cGGK7XYFA7BLNk26P5DGEy69DQ3VIqf4o5tT9/jP3jS5N98LZtKVpXggdlWA26HZMwVjJNUx8x7OwgSjAwQNZcY7yJKTXtdZAJQWpkjNKeJjE4aRwOKrFNgOHn9us6t6gbn3AxfNHHJ5uFiAh19UgV5kS0CSWAtGZE9hON3fGUXVKTyf5X8Z9kURv2qiR3MhocUfoOLidUm/hhKOF75WMrpC5GnTAcxF9KWZ6iUrnLCq36fpoIxkuS9BSw9V46dqa9jV1XipVO6Ut7uej0lj6gWTAmxZFMttzVgq3SaCz4=
+Content-Type: multipart/alternative;
+	boundary="_000_DU2PR03MB794378A4EABB55F5B9D561FEE74B9DU2PR03MB7943eurp_"
+MIME-Version: 1.0
+
+--_000_DU2PR03MB794378A4EABB55F5B9D561FEE74B9DU2PR03MB7943eurp_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Hallo Carlos
+
+wie heute morgen besprochen.
+
+Wir haben bei Mercurius nun wieder ein paar mehr Transaktionen, was Warenei=
+nkauf und Warenverkauf angeht.
+Die Buchhaltung erfolgt derzeit komplett manuell. Wir buchen Eingangs- und =
+Ausgangsrechnungen manuell in Addison ein. Herr Fries hat zwar gewisse Kost=
+enstellen eingerichtet, aber es gibt keine Zuordnung der Rechnungen zu eine=
+r Referenznummer / Position. Das f=FChrt letztlich auch dazu, dass wir kein=
+e Zuordnung der Rechnungen zu Gesch=E4ftsvorf=E4llen haben. Die Gefahr von =
+Fehlkonstellation oder =84Vergessen=93 ist damit gegeben
+
+Was wir nun vorhaben.
+
+Wir nutzen eine Version von Logic als ERP System im Hintergrund. Folgende F=
+unktionen kann Logic bieten:
+
+  *   Erzeugung einer Referenznummer
+  *   Archivierung von Dokumenten, die die Sendung betreffen, eAkte
+  *   Bildung von R=FCckstellungen
+  *   Registrierung von Eingangsrechnungen
+  *   Schreiben von Ausgansgsrechnungen
+  *   Profit / Loss pro Referenz
+  *   Abschluss einer Position
+
+Logic ist kein Warenbeststandsystem. Das ist uns bewusst.
+
+Die Nutzung von Logic kann uns in dem Fall nun auch dazu dienen, die erste =
+Schnittstelle zur FiBu (Addison) aufzubauen. Da es wenige Eingangs und Ausg=
+angsrechnungen sind, und meist keine Zeitkritischen, ist das ein guter aber=
+ realer Pilot, den wir nutzen k=F6nnen, um auch zu proben. Als Vorl=E4ufer =
+f=FCr Logic wenn CargoSoft einmal abgel=F6st wird.
+
+Lennart und Giulia nutzen Mercurius f=FCr Wareneink=E4ufe / Verk=E4ufe.
+Ich werde mit beiden einmal die Nutzung des Systems nun durchgehen, damit w=
+ir die ersten realen F=E4lle einpflegen und auch Rechungen buchen/schreiben
+
+@Carlos Marquez<mailto:carlos@logic.fyi> bitte mal 1 Zugang machen f=FCr je=
+weils
+Lennart Sment
+Giulia Smilari
+Rene Schmitt
+Peter Fries
+
+Wir sollten dan gemeinsam Anfang Juni mal eine kleine Schulung machen wie m=
+an das System logisch nutzen kann
+
+Mit freundlichen Gr=FCssen / Best Regards / Saludos
+
+Carsten Schryver
+
+Managing Director
+H. J.  Schryver & Co. (GmbH & Co. KG)
+Sachsenstrasse 5
+20097 Hamburg / Germany
+Tel.: ++49-40-2 36 33- 272
+Fax: ++49-40-2 36 33- 266
+E-Mail: Carsten.Schryver@schryver.com<mailto:Carsten.Schryver@schryver.com>
+http://www.schryver.com<https://eur02.safelinks.protection.outlook.com/?url=
+=3Dhttp%3A%2F%2Fwww.schryver.com%2F&data=3D05%7C01%7Ccarlos%40logic.fyi%7C5=
+3d4269f97164008575508db6100055d%7Cac969c2abb774574903a3d1ba025335a%7C0%7C0%=
+7C638210424943791304%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2=
+luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=3DyKUCCEI%2FfOW5=
+x28WE7lgureovoLlyNKR952EE5SSopU%3D&reserved=3D0>
+LinkedIn: https://www.linkedin.com/company/3590944<https://eur02.safelinks.=
+protection.outlook.com/?url=3Dhttps%3A%2F%2Fwww.linkedin.com%2Fcompany%2F35=
+90944&data=3D05%7C01%7Ccarlos%40logic.fyi%7C53d4269f97164008575508db6100055=
+d%7Cac969c2abb774574903a3d1ba025335a%7C0%7C0%7C638210424943791304%7CUnknown=
+%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6=
+Mn0%3D%7C3000%7C%7C%7C&sdata=3DGc5W24w8YEmUP%2BO5obUZtC%2BCC6DOeIDm9iYkGo4R=
+ze8%3D&reserved=3D0>
+
+
+Datenschutzerkl=E4rung : https://www.schryver.com/datenschutz<https://eur02=
+.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2Fwww.schryver.com%2Fd=
+atenschutz&data=3D05%7C01%7Ccarlos%40logic.fyi%7C53d4269f97164008575508db61=
+00055d%7Cac969c2abb774574903a3d1ba025335a%7C0%7C0%7C638210424943791304%7CUn=
+known%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJ=
+XVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=3DtNiAhCkB62O1E0HKyJUqWZgTfaK6yTPFNx14Air=
+LVBw%3D&reserved=3D0>
+Privacy policy : https://www.schryver.com/privacy<https://eur02.safelinks.p=
+rotection.outlook.com/?url=3Dhttps%3A%2F%2Fwww.schryver.com%2Fprivacy&data=
+=3D05%7C01%7Ccarlos%40logic.fyi%7C53d4269f97164008575508db6100055d%7Cac969c=
+2abb774574903a3d1ba025335a%7C0%7C0%7C638210424943791304%7CUnknown%7CTWFpbGZ=
+sb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3=
+000%7C%7C%7C&sdata=3D7Pi2iXGrlQO1PN9vCVaHPlbJ%2Fi8TJAl%2F8sxq6AwpfCI%3D&res=
+erved=3D0>
+
+Handelsregister Hamburg A 36194, persoenlich haftende Gesellschafterin: Sch=
+ryver Speditions GmbH, Handelsregister Hamburg HR B 46428, Geschaeftsfuehre=
+r: Johan Peter Schryver, Carsten Schryver, Sebastian Hertel.
+
+Commercial register Hamburg A 36194,  personally liable shareholder: Schryv=
+er Speditions GmbH, Commercial register Hamburg HR B 46428, Managing Direct=
+ors: Johan Peter Schryver, Carsten Schryver, Sebastian Hertel.
+
+
+Wir arbeiten ausschlie=DFlich auf Grundlage der Allgemeinen Deutschen Spedi=
+teurbedingungen 2017 =96 ADSp 2017 =96. Hinweis: Die ADSp 2017 weichen in Z=
+iffer 23 hinsichtlich des Haftungsh=F6chstbetrages f=FCr G=FCtersch=E4den (=
+=A7 431 HGB) vom Gesetz ab, indem sie die Haftung bei multimodalen Transpor=
+ten unter Einschluss einer Seebef=F6rderung und bei unbekanntem Schadenort =
+auf 2 SZR/kg und im =DCbrigen die Regelhaftung von 8,33 SZR/kg zus=E4tzlich=
+ auf 1,25 Millionen Euro je Schadenfall sowie 2,5 Millionen Euro je Schaden=
+ereignis, mindestens aber 2 SZR/kg, beschr=E4nken. Den vollst=E4ndigen Text=
+ der Bedingungen =FCbersenden wir Ihnen gern auf Anfrage bzw. finden Sie un=
+ter www.schryver.com/adsp<https://eur02.safelinks.protection.outlook.com/?u=
+rl=3Dhttp%3A%2F%2Fwww.schryver.com%2Fadsp&data=3D05%7C01%7Ccarlos%40logic.f=
+yi%7C53d4269f97164008575508db6100055d%7Cac969c2abb774574903a3d1ba025335a%7C=
+0%7C0%7C638210424943791304%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQ=
+IjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=3DQPP%2Bmh=
+iyzlQkAwXUlHvD2%2FLy7BpnA3cMKLtShGeU65w%3D&reserved=3D0>.
+
+We operate exclusively in accordance with the Allgemeine Deutsche Spediteur=
+bedingungen 2017 =96 ADSp 2017 =96 (German Freight Forwarders=91 General Te=
+rms and Conditions 2017). Note: In clause 23 the ADSp 2017 deviates from th=
+e statutory liability limitation in section 431 German Commercial Code (HGB=
+) by limiting the liability for multimodal transportation with the involvem=
+ent of sea carriage and an unknown damage location to 2 SDR/kg and, for the=
+ rest, the customary liability limitation of 8,33 SDR/kg additionally to Eu=
+ro 1,25 million per damage claim and EUR 2,5 million per damage event, but =
+not less than 2 SDR/kg. Please visit our homepage for a copy / download und=
+er www.schryver.com/adsp<https://eur02.safelinks.protection.outlook.com/?ur=
+l=3Dhttp%3A%2F%2Fwww.schryver.com%2Fadsp&data=3D05%7C01%7Ccarlos%40logic.fy=
+i%7C53d4269f97164008575508db6100055d%7Cac969c2abb774574903a3d1ba025335a%7C0=
+%7C0%7C638210424943791304%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQI=
+joiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=3DQPP%2Bmhi=
+yzlQkAwXUlHvD2%2FLy7BpnA3cMKLtShGeU65w%3D&reserved=3D0>.
+
+********
+The information transmitted is intended only for the person or entity to wh=
+ich it is addressed and may contain confidential and/or privileged material=
+. Any review, retransmission, dissemination or other use of, or taking of a=
+ny action in reliance upon, this information by persons or entities other t=
+han the intended recipient is prohibited. If you received this in error, pl=
+ease contact the sender and delete the material from any computer.
+
+
+--_000_DU2PR03MB794378A4EABB55F5B9D561FEE74B9DU2PR03MB7943eurp_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Tms Rmn";
+	panose-1:2 2 6 3 4 5 5 2 3 4;}
+@font-face
+	{font-family:Helv;
+	panose-1:2 11 6 4 2 2 2 3 2 4;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ligatures:standardcontextual;
+	mso-fareast-language:EN-US;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ligatures:standardcontextual;
+	mso-fareast-language:EN-US;}
+span.E-MailFormatvorlage17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:368265022;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1368203302 -86981192 67567619 67567621 67567617 675=
+67619 67567621 67567617 67567619 67567621;}
+@list l0:level1
+	{mso-level-start-at:100;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"DE" link=3D"#0563C1" vlink=3D"#954F72" style=3D"word-wrap:bre=
+ak-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Hallo Carlos<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">wie heute morgen besprochen.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Wir haben bei Mercurius nun wieder ein paar mehr Tra=
+nsaktionen, was Wareneinkauf und Warenverkauf angeht.<o:p></o:p></p>
+<p class=3D"MsoNormal">Die Buchhaltung erfolgt derzeit komplett manuell. Wi=
+r buchen Eingangs- und Ausgangsrechnungen manuell in Addison ein. Herr Frie=
+s hat zwar gewisse Kostenstellen eingerichtet, aber es gibt keine Zuordnung=
+ der Rechnungen zu einer Referenznummer
+ / Position. Das f=FChrt letztlich auch dazu, dass wir keine Zuordnung der =
+Rechnungen zu Gesch=E4ftsvorf=E4llen haben. Die Gefahr von Fehlkonstellatio=
+n oder =84Vergessen=93 ist damit gegeben<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Was wir nun vorhaben.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Wir nutzen eine Version von Logic als ERP System im =
+Hintergrund. Folgende Funktionen kann Logic bieten:<o:p></o:p></p>
+<ul style=3D"margin-top:0cm" type=3D"disc">
+<li class=3D"MsoListParagraph" style=3D"margin-left:0cm;mso-list:l0 level1 =
+lfo1">Erzeugung einer Referenznummer<o:p></o:p></li><li class=3D"MsoListPar=
+agraph" style=3D"margin-left:0cm;mso-list:l0 level1 lfo1">Archivierung von =
+Dokumenten, die die Sendung betreffen, eAkte<o:p></o:p></li><li class=3D"Ms=
+oListParagraph" style=3D"margin-left:0cm;mso-list:l0 level1 lfo1">Bildung v=
+on R=FCckstellungen<o:p></o:p></li><li class=3D"MsoListParagraph" style=3D"=
+margin-left:0cm;mso-list:l0 level1 lfo1">Registrierung von Eingangsrechnung=
+en<o:p></o:p></li><li class=3D"MsoListParagraph" style=3D"margin-left:0cm;m=
+so-list:l0 level1 lfo1">Schreiben von Ausgansgsrechnungen<o:p></o:p></li><l=
+i class=3D"MsoListParagraph" style=3D"margin-left:0cm;mso-list:l0 level1 lf=
+o1">Profit / Loss pro Referenz<o:p></o:p></li><li class=3D"MsoListParagraph=
+" style=3D"margin-left:0cm;mso-list:l0 level1 lfo1">Abschluss einer Positio=
+n<o:p></o:p></li></ul>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Logic ist kein Warenbeststandsystem. Das ist uns bew=
+usst.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Die Nutzung von Logic kann uns in dem Fall nun auch =
+dazu dienen, die erste Schnittstelle zur FiBu (Addison) aufzubauen. Da es w=
+enige Eingangs und Ausgangsrechnungen sind, und meist keine Zeitkritischen,=
+ ist das ein guter aber realer Pilot,
+ den wir nutzen k=F6nnen, um auch zu proben. Als Vorl=E4ufer f=FCr Logic we=
+nn CargoSoft einmal abgel=F6st wird.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Lennart und Giulia nutzen Mercurius f=FCr Wareneink=
+=E4ufe / Verk=E4ufe.
+<o:p></o:p></p>
+<p class=3D"MsoNormal">Ich werde mit beiden einmal die Nutzung des Systems =
+nun durchgehen, damit wir die ersten realen F=E4lle einpflegen und auch Rec=
+hungen buchen/schreiben<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><a id=3D"OWAAM79E4D8B49C3F4396912BB3888993216A" href=
+=3D"mailto:carlos@logic.fyi"><span style=3D"font-family:&quot;Calibri&quot;=
+,sans-serif;text-decoration:none">@Carlos Marquez</span></a> bitte mal 1 Zu=
+gang machen f=FCr jeweils
+<o:p></o:p></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Lennart Sment<o:p></o:p></span>=
+</p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Giulia Smilari<o:p></o:p></span=
+></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Rene Schmitt<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US">Peter Fries<o:p></o:p></span></=
+p>
+<p class=3D"MsoNormal"><span lang=3D"ES"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal">Wir sollten dan gemeinsam Anfang Juni mal eine klein=
+e Schulung machen wie man das System logisch nutzen kann<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligatur=
+es:none;mso-fareast-language:DE">Mit freundlichen Gr=FCssen / Best Regards =
+/ Saludos<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligatur=
+es:none;mso-fareast-language:DE"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><b><span lang=3D"NL" s=
+tyle=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:bl=
+ack;mso-ligatures:none;mso-fareast-language:DE">Carsten Schryver<o:p></o:p>=
+</span></b></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><b><span lang=3D"NL" s=
+tyle=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:bl=
+ack;mso-ligatures:none;mso-fareast-language:DE"><o:p>&nbsp;</o:p></span></b=
+></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><b><span lang=3D"NL" s=
+tyle=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:bl=
+ack;mso-ligatures:none;mso-fareast-language:DE">Managing Director<o:p></o:p=
+></span></b></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><b><span lang=3D"NL" s=
+tyle=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:bl=
+ack;mso-ligatures:none;mso-fareast-language:DE">H. J.&nbsp;
+</span></b><b><span lang=3D"EN-US" style=3D"font-size:10.0pt;font-family:&q=
+uot;Tahoma&quot;,sans-serif;color:black;mso-ligatures:none;mso-fareast-lang=
+uage:DE">Schryver &amp; Co. (GmbH &amp; Co. KG)<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligatur=
+es:none;mso-fareast-language:DE">Sachsenstrasse 5
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligatur=
+es:none;mso-fareast-language:DE">20097 Hamburg / Germany<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligatur=
+es:none;mso-fareast-language:DE">Tel.: ++49-40-2 36 33- 272<o:p></o:p></spa=
+n></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligatur=
+es:none;mso-fareast-language:DE">Fax: ++49-40-2 36 33- 266<o:p></o:p></span=
+></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span lang=3D"PT-BR" s=
+tyle=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:bl=
+ack;mso-ligatures:none;mso-fareast-language:DE">E-Mail:
+</span><span style=3D"mso-ligatures:none;mso-fareast-language:DE"><a href=
+=3D"mailto:Carsten.Schryver@schryver.com"><span lang=3D"PT-BR" style=3D"fon=
+t-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:blue">Carsten=
+.Schryver@schryver.com</span></a></span><span lang=3D"PT-BR" style=3D"font-=
+size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligat=
+ures:none;mso-fareast-language:DE"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"mso-lig=
+atures:none;mso-fareast-language:DE"><a href=3D"https://eur02.safelinks.pro=
+tection.outlook.com/?url=3Dhttp%3A%2F%2Fwww.schryver.com%2F&amp;data=3D05%7=
+C01%7Ccarlos%40logic.fyi%7C53d4269f97164008575508db6100055d%7Cac969c2abb774=
+574903a3d1ba025335a%7C0%7C0%7C638210424943791304%7CUnknown%7CTWFpbGZsb3d8ey=
+JWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%=
+7C%7C&amp;sdata=3DyKUCCEI%2FfOW5x28WE7lgureovoLlyNKR952EE5SSopU%3D&amp;rese=
+rved=3D0" originalsrc=3D"http://www.schryver.com/" shash=3D"NKSuzo+LliFNUMj=
+aCCRKldfGp3DPBBlcoii9imyrCvAS06Hyn2Bsr3MR7PyXEwYxORDwizzzR8MlvsN33G04Y7t6nw=
+M6VTcPCrc6JNrF9lsWkf26DBKUPeISJnZKNtG56x743hGJhXG6nycl73KrXA0Gj1IJD8v7cD2dD=
+5PE780=3D"><span lang=3D"PT-BR" style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,sans-serif;color:blue">http://www.schryver.com</span></a></sp=
+an><span lang=3D"PT-BR" style=3D"font-size:10.0pt;font-family:&quot;Tahoma&=
+quot;,sans-serif;color:black;mso-ligatures:none;mso-fareast-language:DE"><o=
+:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"PT-BR" style=3D"font-size:10.0pt;font-=
+family:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligatures:none;mso-far=
+east-language:DE">LinkedIn:
+</span><span style=3D"mso-ligatures:none;mso-fareast-language:DE"><a href=
+=3D"https://eur02.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2Fwww=
+.linkedin.com%2Fcompany%2F3590944&amp;data=3D05%7C01%7Ccarlos%40logic.fyi%7=
+C53d4269f97164008575508db6100055d%7Cac969c2abb774574903a3d1ba025335a%7C0%7C=
+0%7C638210424943791304%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoi=
+V2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=3DGc5W24w8=
+YEmUP%2BO5obUZtC%2BCC6DOeIDm9iYkGo4Rze8%3D&amp;reserved=3D0" originalsrc=3D=
+"https://www.linkedin.com/company/3590944" shash=3D"NAeIZttq/bMZzW6ViMpzDju=
+446fOltGAP/5yR69eFOYX3aWLGiFxDi22ts2AuD3R8hZ9B+U4FZWyWDynP9a7W3LK2xOsRhZpo/=
+iAqiM4qdretna7hqxc45onmQHkoQn6+FSyK5qExfba6E/SOtQvrNJ5kkV3HO+dFcR/+b3FPPc=
+=3D"><span lang=3D"PT-BR" style=3D"font-size:10.0pt;font-family:&quot;Tahom=
+a&quot;,sans-serif;color:#0563C1">https://www.linkedin.com/company/3590944<=
+/span></a></span><span lang=3D"PT-BR" style=3D"font-size:10.5pt;font-family=
+:&quot;Segoe UI&quot;,sans-serif;mso-ligatures:none;mso-fareast-language:DE=
+"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span lang=3D"PT-BR" s=
+tyle=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:bl=
+ack;mso-ligatures:none;mso-fareast-language:DE"><o:p>&nbsp;</o:p></span></p=
+>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center;text-aut=
+ospace:none">
+<b><span lang=3D"PT-BR" style=3D"font-size:14.0pt;font-family:&quot;Helv&qu=
+ot;,sans-serif;color:blue;mso-ligatures:none;mso-fareast-language:DE"><o:p>=
+&nbsp;</o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><b><span style=3D"font=
+-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:black;mso-liga=
+tures:none;mso-fareast-language:DE">Datenschutzerkl=E4rung :
+</span></b><span style=3D"mso-ligatures:none;mso-fareast-language:DE"><a hr=
+ef=3D"https://eur02.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2Fw=
+ww.schryver.com%2Fdatenschutz&amp;data=3D05%7C01%7Ccarlos%40logic.fyi%7C53d=
+4269f97164008575508db6100055d%7Cac969c2abb774574903a3d1ba025335a%7C0%7C0%7C=
+638210424943791304%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2lu=
+MzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=3DtNiAhCkB62O1=
+E0HKyJUqWZgTfaK6yTPFNx14AirLVBw%3D&amp;reserved=3D0" originalsrc=3D"https:/=
+/www.schryver.com/datenschutz" shash=3D"v+cJttuj2swn6gJylZe5Xg3/EUn+AWQoCOK=
+TmjLd/gL3AWgW8lZBfFsuJqV5NfcftCO4y97Og7j4WSWKfAl5XXyeeaBc+b34h8w6NkY+bQEgwP=
++TFbzs27G248NnRfxfpJfjFbb44TyF5SEGHj7XYfCrMOH1o0w7ABaupXeUcxw=3D"><b><span =
+style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:b=
+lue">https://www.schryver.com/datenschutz</span></b></a></span><span style=
+=3D"font-size:12.0pt;font-family:&quot;Tms Rmn&quot;,serif;color:black;mso-=
+ligatures:none;mso-fareast-language:DE">
+</span><b><span style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,sa=
+ns-serif;color:black;mso-ligatures:none;mso-fareast-language:DE"><br>
+Privacy policy : </span></b><span style=3D"mso-ligatures:none;mso-fareast-l=
+anguage:DE"><a href=3D"https://eur02.safelinks.protection.outlook.com/?url=
+=3Dhttps%3A%2F%2Fwww.schryver.com%2Fprivacy&amp;data=3D05%7C01%7Ccarlos%40l=
+ogic.fyi%7C53d4269f97164008575508db6100055d%7Cac969c2abb774574903a3d1ba0253=
+35a%7C0%7C0%7C638210424943791304%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMD=
+AiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=
+=3D7Pi2iXGrlQO1PN9vCVaHPlbJ%2Fi8TJAl%2F8sxq6AwpfCI%3D&amp;reserved=3D0" ori=
+ginalsrc=3D"https://www.schryver.com/privacy" shash=3D"cMCwGTiq7iOm7FDXq35w=
+9e5y986sOm0K2XVyCgCPCcbEQO7b6r4vYPF1G3aqbyM0QUSk/CjX1/QfVMXyIh4KoVilLOD3NWD=
+oqFm1xyrDWHhUE/tpe7DC0lO7Zv9az581DoZJud5owErMwUd7lYGv33RGRscw1Hnw8YHh8/7JBc=
+o=3D"><b><span style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,san=
+s-serif;color:blue">https://www.schryver.com/privacy</span></b></a></span><=
+span style=3D"font-size:12.0pt;font-family:&quot;Tms Rmn&quot;,serif;color:=
+black;mso-ligatures:none;mso-fareast-language:DE">
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:12.0pt;font-family:&quot;Tms Rmn&quot;,serif;color:black;mso-ligatures:n=
+one;mso-fareast-language:DE"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:8.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligature=
+s:none;mso-fareast-language:DE">Handelsregister Hamburg A 36194, persoenlic=
+h haftende Gesellschafterin: Schryver Speditions
+ GmbH, Handelsregister Hamburg HR B 46428, Geschaeftsfuehrer: Johan Peter S=
+chryver, Carsten Schryver, Sebastian Hertel.<br>
+<br>
+Commercial register Hamburg A 36194, &nbsp;personally liable shareholder: S=
+chryver Speditions GmbH, Commercial register Hamburg HR B 46428, Managing D=
+irectors: Johan Peter Schryver, Carsten Schryver, Sebastian Hertel.<o:p></o=
+:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:12.0pt;font-family:&quot;Tms Rmn&quot;,serif;color:black;mso-ligatures:n=
+one;mso-fareast-language:DE"><br>
+</span><b><span style=3D"font-size:8.0pt;font-family:&quot;Tahoma&quot;,san=
+s-serif;color:black;mso-ligatures:none;mso-fareast-language:DE"><br>
+Wir arbeiten ausschlie=DFlich auf Grundlage der Allgemeinen Deutschen Spedi=
+teurbedingungen 2017 =96 ADSp 2017 =96. Hinweis: Die ADSp 2017 weichen in Z=
+iffer 23 hinsichtlich des Haftungsh=F6chstbetrages f=FCr G=FCtersch=E4den (=
+=A7 431 HGB) vom Gesetz ab, indem sie die Haftung
+ bei multimodalen Transporten unter Einschluss einer Seebef=F6rderung und b=
+ei unbekanntem Schadenort auf 2 SZR/kg und im =DCbrigen die Regelhaftung vo=
+n 8,33 SZR/kg zus=E4tzlich auf 1,25 Millionen Euro je Schadenfall sowie 2,5=
+ Millionen Euro je Schadenereignis, mindestens
+ aber 2 SZR/kg, beschr=E4nken. Den vollst=E4ndigen Text der Bedingungen =FC=
+bersenden wir Ihnen gern auf Anfrage bzw. finden Sie unter
+</span></b><span style=3D"mso-ligatures:none;mso-fareast-language:DE"><a hr=
+ef=3D"https://eur02.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fww=
+w.schryver.com%2Fadsp&amp;data=3D05%7C01%7Ccarlos%40logic.fyi%7C53d4269f971=
+64008575508db6100055d%7Cac969c2abb774574903a3d1ba025335a%7C0%7C0%7C63821042=
+4943791304%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJB=
+TiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=3DQPP%2BmhiyzlQkAwXUlH=
+vD2%2FLy7BpnA3cMKLtShGeU65w%3D&amp;reserved=3D0" originalsrc=3D"http://www.=
+schryver.com/adsp" shash=3D"Tw/i5JroET7rfD91Taa/G7Fvvnu9QqIPfS49THCm3X7MUhC=
+2FcCJ4ZX544Ls834h9H2WKs+dAEudSD5oWlgdM/etfC13RNdwqXqil314GcO1QLPRFQVMbkycOs=
+9XI8bnnyWXQ5983uzlKOQ+LWg7zcj5E4VsPG2uIvqFM+M41z0=3D"><b><span style=3D"fon=
+t-size:8.0pt;font-family:&quot;Tahoma&quot;,sans-serif;color:blue">www.schr=
+yver.com/adsp</span></b></a></span><b><span style=3D"font-size:8.0pt;font-f=
+amily:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligatures:none;mso-fare=
+ast-language:DE">.<br>
+<br>
+</span></b><b><span lang=3D"EN-US" style=3D"font-size:8.0pt;font-family:&qu=
+ot;Tahoma&quot;,sans-serif;color:black;mso-ligatures:none;mso-fareast-langu=
+age:DE">We operate exclusively in accordance with the Allgemeine Deutsche S=
+pediteurbedingungen 2017 =96 ADSp 2017 =96 (German
+ Freight Forwarders=91 General Terms and Conditions 2017). Note: In clause =
+23 the ADSp 2017 deviates from the statutory liability limitation in sectio=
+n 431 German Commercial Code (HGB) by limiting the liability for multimodal=
+ transportation with the involvement
+ of sea carriage and an unknown damage location to 2 SDR/kg and, for the re=
+st, the customary liability limitation of 8,33 SDR/kg additionally to Euro =
+1,25 million per damage claim and EUR 2,5 million per damage event, but not=
+ less than 2 SDR/kg. Please visit
+ our homepage for a copy / download under </span></b><span style=3D"mso-lig=
+atures:none;mso-fareast-language:DE"><a href=3D"https://eur02.safelinks.pro=
+tection.outlook.com/?url=3Dhttp%3A%2F%2Fwww.schryver.com%2Fadsp&amp;data=3D=
+05%7C01%7Ccarlos%40logic.fyi%7C53d4269f97164008575508db6100055d%7Cac969c2ab=
+b774574903a3d1ba025335a%7C0%7C0%7C638210424943791304%7CUnknown%7CTWFpbGZsb3=
+d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000=
+%7C%7C%7C&amp;sdata=3DQPP%2BmhiyzlQkAwXUlHvD2%2FLy7BpnA3cMKLtShGeU65w%3D&am=
+p;reserved=3D0" originalsrc=3D"http://www.schryver.com/adsp" shash=3D"Tw/i5=
+JroET7rfD91Taa/G7Fvvnu9QqIPfS49THCm3X7MUhC2FcCJ4ZX544Ls834h9H2WKs+dAEudSD5o=
+WlgdM/etfC13RNdwqXqil314GcO1QLPRFQVMbkycOs9XI8bnnyWXQ5983uzlKOQ+LWg7zcj5E4V=
+sPG2uIvqFM+M41z0=3D"><b><span lang=3D"EN-US" style=3D"font-size:8.0pt;font-=
+family:&quot;Tahoma&quot;,sans-serif;color:blue">www.schryver.com/adsp</spa=
+n></b></a></span><b><span lang=3D"EN-US" style=3D"font-size:8.0pt;font-fami=
+ly:&quot;Tahoma&quot;,sans-serif;color:black;mso-ligatures:none;mso-fareast=
+-language:DE">.</span></b><span lang=3D"EN-US" style=3D"font-size:12.0pt;fo=
+nt-family:&quot;Tms Rmn&quot;,serif;color:black;mso-ligatures:none;mso-fare=
+ast-language:DE">
+<br>
+</span><span lang=3D"EN-US" style=3D"font-size:8.0pt;font-family:&quot;Taho=
+ma&quot;,sans-serif;color:black;mso-ligatures:none;mso-fareast-language:DE"=
+><br>
+********<br>
+The information transmitted is intended only for the person or entity to wh=
+ich it is addressed and may contain confidential and/or privileged material=
+. Any review, retransmission, dissemination or other use of, or taking of a=
+ny action in reliance upon, this
+ information by persons or entities other than the intended recipient is pr=
+ohibited. If you received this in error, please contact the sender and dele=
+te the material from any computer.</span><span lang=3D"EN-US" style=3D"mso-=
+ligatures:none;mso-fareast-language:DE"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US"><o:p>&nbsp;</o:p></span></p>
+</div>
+</body>
+</html>
+
+--_000_DU2PR03MB794378A4EABB55F5B9D561FEE74B9DU2PR03MB7943eurp_--
