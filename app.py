@@ -88,7 +88,7 @@ def summarize_email(email_text):
     model_engine = "text-davinci-002"
 
     prompt = (
-        "Please summarize the following email:\n\n"
+        "Please summarize the following email, get the text sentiment and extract 5 keywords:\n\n"
         "{text_content}\n\n"
         "Here's an example of what the response should look like:\n\n"
         "{example_data}\n\n"
@@ -110,12 +110,12 @@ def summarize_email(email_text):
         temperature=0.5,
     )
 
-    if response["code"] != 200:
-        raise ValueError("Failed to summarize email: " + response["message"])
+    if response["choices"][0]["finish_reason"] != "stop":
+        raise ValueError("Failed to summarize email: " + response["choices"][0]["text"])
 
-    parsed_response = response["choices"][0]
-    summary = parsed_response["text"].strip()
+    summary = response["choices"][0]["text"].strip()
     return summary
+
 
 
 
@@ -153,8 +153,6 @@ def process_email():
     #print(response)
 
     return jsonify(response)
-
-
 
 if __name__ == '__main__':
     app.run()
