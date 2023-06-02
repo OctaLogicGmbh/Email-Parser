@@ -52,8 +52,6 @@ def extract_latest_body(latest_body, sender_email_domain):
     return text_content
 
 
-
-
 from datetime import datetime
 
 def read_email(file_path, file_type):
@@ -99,10 +97,6 @@ def read_email(file_path, file_type):
     return sender_email, recipients_email, subject, latest_body, sent_date_formatted
 
 
-
-
-
-
 def summarize_email(email_text):
     latest_body = email_text
     model_engine = "text-davinci-002"
@@ -111,7 +105,6 @@ def summarize_email(email_text):
         "[no prose] [Output only JSON] 1.Summary: Make a summary the following email in 25 words. 2.Sentiment: Get the text sentiment. 3.Keywords: Extract 5 keywords:\n\n"
         "{text_content}\n\n"
     )
-
 
     response = openai.Completion.create(
         engine=model_engine,
@@ -155,15 +148,15 @@ def process_email():
         'summary': summary
     }
 
-    # Save the response dictionary as a JSON file
-    response_filename = secure_filename(email_file.filename) + '.json'
-    response_filepath = os.path.join(TEMP_FOLDER, response_filename)
-    with open(response_filepath, 'w') as json_file:
-        json.dump(response, json_file, default=str)
+    # Delete the email file from the temp folder
+    os.remove(file_path)
+
+    # Return the response as JSON
+    return jsonify(response), 200
 
 
-    return jsonify(response)
 
 
 if __name__ == '__main__':
     app.run()
+
