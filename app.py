@@ -21,13 +21,13 @@ app = Flask(__name__)
 openai.api_key = "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"
 
 def extract_latest_body(latest_body, sender_email_domain):
-    # Analizar el cuerpo HTML utilizando BeautifulSoup
+    # Analizar el cuerpo HTML utilizando BeautifulSoup.
     soup = BeautifulSoup(latest_body, 'html.parser')
 
-    # Encontrar el elemento 'blockquote'
+    # Encontrar el elemento 'blockquote'.
     blockquote = soup.find('blockquote')
     if blockquote:
-        # Si se encuentra un 'blockquote', buscar el elemento anterior más cercano que sea 'blockquote', 'div' o 'p'
+        # Si se encuentra un 'blockquote', buscar el elemento anterior más cercano que sea 'blockquote', 'div' o 'p'.
         latest_message = blockquote.find_previous(['blockquote', 'div', 'p'])
     else:
         # Si no se encuentra un 'blockquote', utilizar el propio 'soup'
