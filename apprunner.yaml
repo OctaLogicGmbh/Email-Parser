@@ -4,5 +4,6 @@ build:
   commands:
     build:
       - pip install -r requirements.txt
+      - pip install python-dotenv
 run:
   command: python app.py
