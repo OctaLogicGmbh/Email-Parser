@@ -1,4 +1,9 @@
 import os
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 import json
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
@@ -18,7 +23,8 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(TEMP_FOLDER, exist_ok=True)
 
 app = Flask(__name__)
-openai.api_key = "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"
+openai.api_key = os.environ.get('OPENAI_API_KEY')
+#openai.api_key = "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"
 
 def extract_latest_body(latest_body, sender_email_domain):
     # Analizar el cuerpo HTML utilizando BeautifulSoup.
@@ -155,8 +161,5 @@ def process_email():
     return jsonify(response), 200
 
 
-
-
-if __name__ == '__main__':
-    app.run()
-
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
